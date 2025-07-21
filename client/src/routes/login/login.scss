@@ -1,0 +1,124 @@
+@use "../../responsive" as *;
+
+$primary-color: #5c4828;
+$bg-gradient: linear-gradient(135deg, #f5f1e5, #c5a877);
+
+.login-container {
+  display: flex;
+  height: 100%;
+}
+
+.image-section {
+  flex: 2;
+  background-color:  #f4efe8;
+  position: relative;
+
+  @include lg{
+    background-color: transparent;
+    
+    width:118%;
+    height: 125%;
+    margin-top: -25px;
+    flex-shrink: 0;
+  }
+  @include md{
+    position:absolute;
+    right: 0;
+    flex: none;
+    width:40%;
+    height: 100vh;
+  }
+  @include sm{
+    display: none;
+  }
+
+  img{
+    width: 112%;
+    height: 115%;
+    position:absolute;
+    right: 0;
+    margin-top: -10px;
+
+    @include md{
+      right:100;
+    }
+
+    
+  }
+}
+
+
+
+.form-section {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  
+  @include md{
+    padding-left: 14px;
+    justify-content: flex-start;
+  }
+  @include sm{
+    justify-content: center;
+  }
+
+  .heading{
+    color: #4b3b21;
+}
+
+.auth-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  span{
+    color: red;
+    padding-top: 10px;
+  }
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: 1.3 0.3s ease;
+
+  &:hover {
+    background-color: #4b3b21;
+  }
+}
+
+
+.question {
+  margin-top: 15px;
+  cursor: pointer;
+  color: $primary-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+}

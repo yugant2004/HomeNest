@@ -1,0 +1,65 @@
+@use "../../responsive.scss" as *;
+
+.listPage{
+    display:flex;
+    height: 100%;
+
+    .listContainer{
+        flex:3;
+        padding-left: 10px;
+        height: 100%;
+
+        .wrapper{
+            height: 100%;
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            overflow-y: scroll;
+            padding-bottom: 50px;
+
+            .no-posts-message {
+                margin-top: 30px;
+                padding: 30px;
+                background-color: #f9f7f3;
+                border-radius: 8px;
+                border: 1px dashed #ccc;
+                text-align: center;
+                color: #695f38;
+
+                p {
+                    margin: 10px 0;
+                    font-size: 16px;
+
+                    &:first-child {
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .mapContainer{
+        flex:2;
+        background-color: #f4efe8;
+        height: 100vh;
+        width: fit-content;
+
+        .empty-map {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #695f38;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @include sm{
+            display: none;
+        }
+    }
+}
+

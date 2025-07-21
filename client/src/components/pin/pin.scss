@@ -1,0 +1,33 @@
+.popupContainer{
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    a{
+        color: #4f4726;
+        font-weight: 600;
+    }
+    
+    img{
+        display: flex;
+        //flex-direction: column;
+        flex: 2;
+        height:65px;
+        width:auto;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    .textContainer{
+        display: flex;
+        flex:3;
+        flex-direction: column;
+        justify-content: space-around;
+        color: #75693f;
+        .title{
+            font-size: 13px;
+            &:hover{
+                scale: 1.01;
+                
+            }
+        }
+    }
+}

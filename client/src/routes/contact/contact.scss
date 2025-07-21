@@ -1,0 +1,116 @@
+@use "../../responsive.scss" as *;
+
+.contact{
+    
+        height:100%;
+        color: #695f38;
+        display:flex;
+        
+
+        .left{
+            flex:3;
+            height: 100%;
+
+            @include md{
+                left: 0;
+                overflow-y: scroll;
+                padding-left: 20px;
+            }
+
+            @include sm{
+                padding-top: 20px;
+            }
+           
+            .developer{
+                display: flex;
+                gap:20px;
+                width: 90%;
+                border: 1px solid#c7c2c2;
+                border-top: none;
+                box-shadow: 2px 3px #c8c7c7;
+                border-radius: 10px;
+
+                @include md{
+                    flex:none;
+                    left: 0;
+                }
+
+                .photo{
+                    flex:2;
+                    height:180px;
+
+                    img{
+                        height: 100%;
+                        width:100%;
+                        object-fit:cover;
+                        border-radius: 10px;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+                .personaldetails{
+                    flex:3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap:20px;
+
+                    @include lg{
+                        font-size: 16px;
+                    }
+
+                    @include md{
+                        font-size: 16px;
+                    }
+
+                    @include sm{
+                        font-size: 14px;
+                    }
+
+                    .Name{
+                        margin-top: -19px;
+
+                        @include md{
+                            margin-top: 0px;
+                            font-size: 18px;
+                        }
+                    }
+                    .linkedin{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+            
+                }
+            }
+
+        }
+        .right{
+            flex:2;
+            background-color:  #f4efe8;
+            position: relative;
+
+            @include lg{
+                background-color: transparent;
+                
+                width:118%;
+                height: 125%;
+                margin-top: -25px;
+                flex-shrink: 0;
+              }
+              @include md{
+               display: none;
+              }
+              @include sm{
+                display: none;
+              }
+            
+
+            img{
+                width: 112%;
+                height: 115%;
+                position:absolute;
+                right: 0;
+                margin-top: -10px;
+            }
+        }
+}

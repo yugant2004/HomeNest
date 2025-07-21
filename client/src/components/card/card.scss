@@ -1,0 +1,125 @@
+@use "../../responsive.scss" as *;
+.card{
+    display: flex;
+    gap:10px;
+    border: 1px solid#c7c2c2;
+    border-top: none;
+    box-shadow: 2px 3px #c8c7c7;
+    border-radius: 10px;
+
+
+    .imageContainer{
+        flex:2;
+        height: 200px;
+
+        @include sm{
+            display: none;
+        }
+        img{
+            height: 100%;
+            width:100%;
+            object-fit:cover;
+            border-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+    .textContainer{
+        flex:3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+
+        img{
+            width: 18px;
+            height:18px;
+        }
+        .title{
+            font-size: 19px;
+            color:#9b7e57;
+            font-weight: 600;
+            transition:all 0.4s ease-in;
+            text-shadow:1px 1px #c6c5c5;
+
+            &:hover{
+                scale:1.02;
+               color: #695f38;
+            }
+        }
+
+        .address{
+            font-size: 16px;
+            color: #666;
+            display:flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .price{
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 3px 10px;
+            border-radius: 2px;
+            align-items: center;
+            width: fit-content;
+            background-color: #695f38;
+           color: #f4efe8;
+           box-shadow: 1px 2px #424241;
+        }
+
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding-bottom: 10px;
+
+            .features{
+                display: flex;
+                gap:20px;
+                font-size: 14px;
+
+                .feature{
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    padding: 3px 10px;
+                    box-shadow: 1px 3px#e2e0e0;
+                    border-radius: 4px;
+                    background-color: whitesmoke;
+                }
+            }
+            .icons{
+                display: flex;
+                gap: 5px;
+                padding-right: 10px;
+
+
+                .icon{
+                    border: 1px solid #999;
+                    padding:4px 5px;
+                    border-radius: 4px;
+                    box-shadow: 1px 2px #b4aeae;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover{
+                        background-color: lightgray;
+                    }
+                }
+
+                .delete-icon {
+                    border: 1px solid #d9534f;
+                    background-color: #fff;
+
+                    &:hover {
+                        background-color: #b1aeae;
+
+                    }
+                }
+            }
+        }
+
+    }
+}

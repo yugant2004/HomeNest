@@ -1,0 +1,137 @@
+@use "../../responsive.scss" as *;
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+
+    h2 {
+        color: #695f38;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    p {
+        margin-bottom: 20px;
+        color: #333;
+        max-width: 500px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #695f38;
+        color: #f4efe8;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #5c4b34;
+        }
+    }
+}
+
+.profile{
+    display: flex;
+    height: 100%;
+
+    @include md{
+        flex-direction: column;
+        overflow:scroll ;
+    }
+
+    .details{
+      flex: 3;
+      overflow-y: scroll;
+      padding-bottom: 50px;
+
+      @include md{
+        flex:none;
+        height: max-content;
+        overflow: hidden;
+    }
+
+      .wrapper{
+        padding-top: 20px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1{
+                font-weight: 300;
+                color: #695f38;
+            }
+
+            button{
+                padding: 9px 18px;
+                background-color: #695f38;
+                color: #f4efe8;
+                cursor: pointer;
+                border: none;
+
+                &:hover{
+                    transition:0.3s ease-in;
+                    scale: 0.98;
+                }
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            span{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            button{
+                width: 120px;
+                padding: 9px 18px;
+                background-color: #5c4b34;
+                color: #f4efe8;
+                font-size: 14px;
+                cursor: pointer;
+                border: none;
+                align-items: center;
+                &:hover{
+                    transition:0.3s ease-in;
+                    scale: 1.1;
+                }
+            }
+            img{
+               width: 40px;
+               height: 40px;
+               border-radius: 30%;
+               object-fit: cover;
+            }
+        }
+      }
+    }
+    .chatcontainer{
+       flex: 2;
+       background-color:  #f4efe8;
+       height: 100%;
+
+       .wrapper{
+        padding: 0px 20px;
+        height: 100%;
+    }
+    @include md{
+        flex:none;
+        height: max-content;
+    }
+    }
+
+
+}

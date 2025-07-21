@@ -1,0 +1,22 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &.empty-list {
+        min-height: 150px;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f7f3;
+        border-radius: 8px;
+        border: 1px dashed #ccc;
+    }
+
+    .no-posts-message {
+        color: #695f38;
+        font-size: 16px;
+        text-align: center;
+        padding: 20px;
+        font-style: italic;
+    }
+}

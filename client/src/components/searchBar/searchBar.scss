@@ -1,0 +1,100 @@
+@use "../../responsive" as *;
+.searchBar{
+    @include sm{
+        width: 200%;
+    }
+
+    .type{
+
+    button{
+        padding: 12px 24px;
+        border:1px solid #999;
+        border-bottom: none;
+        background-color: white;
+
+        &.active{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+        &:first-child{
+            border-top-left-radius: 4px;
+            border-right: none;
+        }
+        &:last-child{
+            border-top-right-radius: 4px;
+            border-left: none;
+        }
+        
+    }
+}
+        form{
+            border:1px solid #999;
+            display: flex;
+            justify-content: space-between;
+            height: 44px;
+            gap:0px;
+
+            input{
+                border: none;
+                padding: 0 10px;
+                width: 200px;
+               
+                @include lg{
+                    padding: 0px 5px;
+
+                    &:nth-child(2),&:nth-child(3){
+                        width:140px;
+                    }
+                }
+                @include md{
+                    width: auto;
+                &:nth-child(2),&:nth-child(3){
+                    width:auto;
+                }
+            }
+                @include sm{
+                  width:100%;
+                  padding: 20px;
+                  border: 1px solid #999;
+                }   
+
+            }
+            button{
+                border:none;
+                cursor: pointer;
+                background-color: black;
+                padding: 10px 10px;
+                padding-left: 14px;
+                padding-right: 14px;
+
+
+                img{
+                    width: 20px;
+                    height: 20px;
+            }
+            &:hover{
+                scale:1.01;
+                transition: 0.3s ease-in-out;
+            }
+            @include sm{
+                width: 99%;
+                margin-bottom: 20px;
+            }
+
+            }
+            @include lg{
+                width:520px;
+                gap: 0px;
+                padding:none;
+            }
+            @include sm{
+                flex-direction:column;
+                width: 100%;
+                gap: 2px;
+                border: none;
+            }
+        }
+    
+}
